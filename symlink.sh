@@ -1,6 +1,6 @@
 #!/bin/sh
 # Create symlinks for GNU Arm embedded toolchain for macOS
-VERSION=1.0.0
+VERSION=1.0.1
 PACKAGE=~/.vscode/extensions/chipcode-nl.gcc-arm-mac-${VERSION}
 TOOLCHAIN=${PACKAGE}/bin
 CROSS=arm-none-eabi-
