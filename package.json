@@ -1,0 +1,58 @@
+{
+  "name": "gcc-arm-mac",
+  "displayName": "Arm toolchain macOS",
+  "description": "GNU Arm embedded toolchain for macOS",
+  "icon": "images/GCC_macOS_256.png",
+  "version": "1.0.2",
+  "preview": false,
+  "publisher": "chipcode-nl",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "GNU Arm embedded toolchain configuration",
+      "properties": {
+        "arm-none-eabi.bin": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "${env:HOME}/.vscode/extensions/chipcode-nl.gcc-arm-mac-1.0.2/bin",
+          "description": "The path to the GNU toolchain."
+        },
+        "arm-none-eabi.include": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "${env:HOME}/.vscode/extensions/chipcode-nl.gcc-arm-mac-1.0.2/arm-none-eabi/include",
+          "description": "The path to the GCC header files."
+        },
+        "arm-none-eabi.lib": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "${env:HOME}/.vscode/extensions/chipcode-nl.gcc-arm-mac-1.0.2/lib/gcc/arm-none-eabi/10.2.1",
+          "description": "The path to the GCC library files."
+        }
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chipcode-nl/gcc-arm-mac.git"
+  },
+  "license": "GPL-3.0",
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install && ~/.vscode/extensions/chipcode-nl.gcc-arm-mac-1.0.2/symlink.sh"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.52.0"
+  }
+}

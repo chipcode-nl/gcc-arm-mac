@@ -1,0 +1,4 @@
+node_modules
+*.vsix
+personal_access_token
+.DS_Store
